@@ -1,0 +1,57 @@
+version: "3.8"
+
+services:
+  
+  server:
+
+    ports: 
+
+      - "8080:8080"
+    
+    build: 
+        
+        context: ./
+        
+        dockerfile: dockerfiles/server.dockerfile
+    
+    stdin_open: true
+
+    tty: true
+
+    env_file: 
+      
+      - ./env-files/.env.development
+
+    volumes: 
+  
+      - ./:/app
+      
+      
+      
+
+  npm: 
+      
+    build: 
+      
+      context: ./
+      
+      dockerfile: dockerfiles/npm.dockerfile
+
+    volumes: 
+
+      - ./:/app:delegated
+  
+  vue: 
+      
+    build: 
+      
+      context: ./
+      
+      dockerfile: dockerfiles/vue.dockerfile
+
+    volumes: 
+
+      - ./:/app:delegated
+
+  
+

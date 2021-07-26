@@ -1,0 +1,2 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[443],{178:function(n,u,a){"use strict";a.r(u),a.d(u,{default:function(){return c}});var t=a(252);const e={class:"about"},s=(0,t.Wm)("h1",null,"This is an about page",-1);const r={render:function(n,u){return(0,t.wg)(),(0,t.j4)("div",e,[s])}};var c=r}}]);
+//# sourceMappingURL=about.86536ceee412e792d9d0.bundle.js.map
